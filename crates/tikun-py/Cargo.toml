@@ -1,0 +1,17 @@
+[package]
+name = "tikun-py"
+license = "MIT"
+version = "0.1.0"
+edition = "2021"
+description = "Tikun Python: PyO3 FFI Python 3.14 API surface for tikun"
+
+[lib]
+name = "_tikun"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+tikun-core.workspace = true
+tikun-cpu.workspace = true
+tikun-metal.workspace = true
+pyo3.workspace = true
+numpy.workspace = true

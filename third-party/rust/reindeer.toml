@@ -1,0 +1,8 @@
+## Reindeer configuration for Tikun Buck2 build system
+
+third_party_dir = "."
+manifest_path = "../../Cargo.toml"
+cargo_env = true
+
+[buck]
+file_name = "BUCK"

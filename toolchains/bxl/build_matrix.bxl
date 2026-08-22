@@ -1,0 +1,17 @@
+# Buck2 BXL Script: Build Matrix & Static Verifier Orchestrator
+
+def _run_impl(ctx):
+    ctx.output.print("bxl: evaluating root target matrix...")
+    targets = ctx.uquery().eval("root//...")
+    for t in targets:
+        ctx.output.print("  target: " + str(t.label))
+
+run = bxl_main(
+    impl = _run_impl,
+    cli_args = {},
+)
+
+matrix = bxl_main(
+    impl = _run_impl,
+    cli_args = {},
+)

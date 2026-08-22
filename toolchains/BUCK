@@ -1,0 +1,5 @@
+# Toolchain target definitions for macOS Apple Silicon
+
+load("@prelude//toolchains:demo.bzl", "system_demo_toolchains")
+
+system_demo_toolchains()

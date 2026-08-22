@@ -1,0 +1,13 @@
+[package]
+name = "tikun-core"
+license = "MIT"
+version = "0.1.0"
+edition = "2021"
+description = "Tikun Core: Zero-dependency PyTree engine, Schedule IR, and static verifier"
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
+ennx.workspace = true
+comfy-table.workspace = true
+

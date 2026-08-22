@@ -1,0 +1,46 @@
+# Building and releasing library:
+*.egg-info
+*.pyc
+*.so
+build/
+dist/
+venv/
+_testing/
+
+# Building the documentation
+docs/_autosummary
+docs/_collections
+docs/api/generated
+docs/modules/generated
+docs/sg_execution_times.rst
+
+# Mac OS
+.DS_Store
+
+# Build artifacts
+/target/
+/dist/
+/.pixi/
+/buck-out/
+/prelude/
+/rust/target/
+/tools/bin/buck2
+/tools/bin/reindeer
+/tools/.crates*
+/tools/.crates.toml
+/tools/.crates2.json
+*.dylib
+*.so
+/tikun
+.tikun_hardware_profile.json
+*.mmdnb_checkpoints
+examples/baseline_c
+
+# Python tools
+.mypy_cache/
+.pytype/
+.ipynb_checkpoints
+
+# Editors
+.idea
+.vscode

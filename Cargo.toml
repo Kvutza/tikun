@@ -1,0 +1,43 @@
+[workspace]
+members = [
+    "crates/tikun-core",
+    "crates/tikun-cpu",
+    "crates/tikun-metal",
+    "crates/tikun-py",
+    "crates/tikun-dev",
+]
+default-members = [
+    "crates/tikun-dev",
+]
+resolver = "2"
+
+[workspace.dependencies]
+tikun-core = { path = "crates/tikun-core" }
+tikun-cpu = { path = "crates/tikun-cpu" }
+tikun-metal = { path = "crates/tikun-metal" }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+rayon = "1.10"
+comfy-table = "7.1"
+ennx = { git = "https://github.com/Kvutza/ennx" }
+clap = { version = "4.4", features = ["derive"] }
+pyo3 = { version = "0.22", features = ["extension-module", "abi3-py310"] }
+numpy = "0.22"
+candle-core = "0.8"
+candle-nn = "0.8"
+metal = "0.29"
+objc = "0.2"
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+overflow-checks = false
+strip = true
+
+[profile.dev]
+opt-level = 1
+debug = 1
+
+

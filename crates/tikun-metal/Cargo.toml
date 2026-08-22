@@ -1,0 +1,11 @@
+[package]
+name = "tikun-metal"
+license = "MIT"
+version = "0.1.0"
+edition = "2021"
+description = "Tikun Metal: Apple Silicon GPU Metal compute pipeline engine"
+
+[dependencies]
+tikun-core.workspace = true
+metal.workspace = true
+objc.workspace = true

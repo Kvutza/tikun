@@ -1,0 +1,17 @@
+[package]
+name = "tikun-dev"
+license = "MIT"
+version = "0.1.0"
+edition = "2021"
+description = "Tikun Dev: Rust CLI dev wrapper executing Buck2 and BXL scripts under the hood"
+
+[[bin]]
+name = "tikun"
+path = "src/main.rs"
+
+[dependencies]
+tikun-core.workspace = true
+tikun-cpu.workspace = true
+clap.workspace = true
+serde.workspace = true
+serde_json.workspace = true

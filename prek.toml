@@ -1,0 +1,51 @@
+# prek.toml - Code Quality, Formatting & Testing Hooks
+
+[settings]
+default_stages = ["pre-commit", "pre-push"]
+fail_fast = true
+
+# 1. Rust Code Quality Hooks
+[[hooks]]
+name = "cargo-fmt"
+entry = "cargo fmt --all -- --check"
+language = "system"
+types = ["rust"]
+pass_filenames = false
+
+[[hooks]]
+name = "cargo-clippy"
+entry = "cargo clippy --workspace --all-targets -- -D warnings"
+language = "system"
+types = ["rust"]
+pass_filenames = false
+
+[[hooks]]
+name = "cargo-test"
+entry = "cargo test --workspace"
+language = "system"
+types = ["rust"]
+pass_filenames = false
+stages = ["pre-push"]
+
+# 2. KISS Quality & Duplication Metrics
+[[hooks]]
+name = "kiss-dry"
+entry = "kiss dry crates/"
+language = "system"
+types = ["rust"]
+pass_filenames = false
+
+# 3. Python Code Formatting & Linting
+[[hooks]]
+name = "ruff-format"
+entry = "ruff format --check ."
+language = "system"
+types = ["python"]
+pass_filenames = false
+
+[[hooks]]
+name = "ruff-lint"
+entry = "ruff check ."
+language = "system"
+types = ["python"]
+pass_filenames = false

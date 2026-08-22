@@ -1,0 +1,4 @@
+features = ["use-libc"]
+
+[buildscript]
+run = true

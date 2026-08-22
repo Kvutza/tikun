@@ -1,0 +1,10 @@
+[target.aarch64-apple-darwin]
+rustflags = [
+    "-C", "link-arg=-framework",
+    "-C", "link-arg=Accelerate",
+    "-C", "link-arg=-undefined",
+    "-C", "link-arg=dynamic_lookup",
+]
+
+[build]
+target-dir = "target"

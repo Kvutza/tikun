@@ -1,0 +1,26 @@
+[repositories]
+root = .
+
+[cells]
+root = .
+prelude = prelude
+toolchains = toolchains
+none = none
+
+[cell_aliases]
+config = prelude
+ovr_config = prelude
+fbcode = none
+fbsource = none
+fbcode_macros = none
+buck = none
+
+[parser]
+default_target_platform = root//:macos-arm64-platform
+
+[rust]
+rustc = rustc
+
+[cxx]
+cxx = clang++
+
